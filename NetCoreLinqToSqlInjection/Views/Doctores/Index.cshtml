@@ -1,0 +1,29 @@
+﻿@model List<Doctor>
+
+<h1>Doctores</h1>
+
+<p>
+    <a asp-controller="Doctores" asp-action="Create">
+        Crear doctor
+    </a>
+</p>
+
+<table class="table table-hover">
+    <thead>
+        <th>Apellido</th>
+        <th>Especialidad</th>
+        <th>Salario</th>
+        <th>Hospital</th>
+    </thead>
+    <tbody>
+        @foreach (Doctor doc in Model)
+        {
+            <tr>
+                <td>@doc.Apellido</td>
+                <td>@doc.Especialidad</td>
+                <td>@doc.Salario</td>
+                <td>@doc.IdHospital</td>
+            </tr>
+        }
+    </tbody>
+</table>
