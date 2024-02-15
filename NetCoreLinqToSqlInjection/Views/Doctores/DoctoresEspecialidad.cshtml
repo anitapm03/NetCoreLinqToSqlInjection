@@ -1,0 +1,41 @@
+﻿@model List<Doctor>
+
+<h1>Buscador por especialidad</h1>
+
+<form method="post">
+    <label>Especialidad:</label>
+    <input type="text" name="especialidad" class="form-control" required />
+    <br />
+    <button class="btn btn-outline-dark">
+        Buscar!
+    </button>
+</form>
+<br />
+@if(Model != null)
+{
+    <table class="table table-dark">
+        <thead>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+            <th>Salario</th>
+            <th>Hospital</th>
+        </thead>
+        <tbody>
+            @foreach (Doctor doc in Model)
+            {
+                <tr>
+                    <td>@doc.Apellido</td>
+                    <td>@doc.Especialidad</td>
+                    <td>@doc.Salario</td>
+                    <td>@doc.IdHospital</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h2 style="color:red">
+        @ViewData["MENSAJE"]
+    </h2>
+}

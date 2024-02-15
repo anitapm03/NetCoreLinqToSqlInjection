@@ -23,6 +23,22 @@
                 <td>@doc.Especialidad</td>
                 <td>@doc.Salario</td>
                 <td>@doc.IdHospital</td>
+                <td>
+                    <a asp-controller="Doctores"
+                        asp-action="Delete"
+                        asp-route-iddoctor="@doc.IdDoctor"
+                        class="btn btn-danger">
+                    Eliminar
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Doctores"
+                       asp-action="ModificarDoctor"
+                       asp-route-iddoctor="@doc.IdDoctor"
+                       class="btn btn-danger">
+                        Modificar
+                    </a>
+                </td>
             </tr>
         }
     </tbody>

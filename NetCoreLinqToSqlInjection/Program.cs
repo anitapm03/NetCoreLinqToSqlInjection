@@ -1,5 +1,6 @@
 using NetCoreLinqToSqlInjection.Models;
 using NetCoreLinqToSqlInjection.Repositories;
+using NetCoreLinqToSqlInjection.Repositories.RepositoriesOracle;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<IRepositoryDoctores, RepositoryDoctoresSQLServer>();
+//builder.Services.AddTransient<IRepositoryDoctores, RepositoryDoctoresOracle>();
 
 //builder.Services.AddTransient<Coche>();
 //builder.Services.AddSingleton<Coche>();

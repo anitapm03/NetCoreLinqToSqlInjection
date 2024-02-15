@@ -1,0 +1,24 @@
+﻿@model Doctor
+
+<h1>Editar doctor</h1>
+
+@if (Model != null)
+{
+    <form method="post">
+        <input type="hidden" name="iddoctor" value="@Model.IdDoctor" />
+
+        <label>Apellido</label>
+        <input type="text" name="apellido" value="@Model.Apellido" class="form-control"/>
+        <br>
+        <label>Especialidad</label>
+        <input type="text" name="especialidad" value="@Model.Especialidad" class="form-control" />
+        <br>
+        <label>Salario</label>
+        <input type="number" name="salario" value="@Model.Salario" class="form-control" />
+        <br>
+        <label>IDHospital</label>
+        <input type="text" name="apellido" value="@Model.IdHospital" class="form-control" />
+        <br>
+        <button class="btn btn-success">Modificar</button>
+    </form>
+}
